@@ -7,7 +7,7 @@
    
 
    ## 프로젝트 소개
-
+   
    - 🗓
 
      프로젝트 기간
@@ -32,7 +32,7 @@
      ### 📌 **BackEnd**
 
      - DRF(Django REST Framework)를 통한 REST API 구현 및 프론트엔드 통신
-
+     배포 주소:https://www.beforetripsback.shop/users/register/
    
 
    ## 모델 구조, ERD 작성
