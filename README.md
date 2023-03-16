@@ -118,14 +118,20 @@
 
 ### ⁉️ 에러 메세지
 
-1. 유저 모델이 장고에서 커스텀 할 수 있게 끔 제공 해주는 AbstractBaseUser것에 의존 하고 있었기 때문에 migrate가 발생 하지 않은 현상이 존재 했다.
+1. 유저 모델이 AbstractBaseUser 의존 -> migrate가 발생 하지 않은 현상 발생
 
+![image](https://user-images.githubusercontent.com/59475851/225665781-efdde7c6-bac8-42cc-a780-6864faad3379.png)
+
+![image](https://user-images.githubusercontent.com/59475851/225665645-90590e9d-361f-47b2-bc48-f0a9af280486.png)
 
 
 ### ⭕️ 해결 방법
 
-1. Settings.py 에서 INSTALLED_APPS django.contrib.admin 주석 처리 와 프로젝트 urls.py 중 path('admin/', admin.site.urls) 부분을 주석 처리 하여 해결 할 수 있었다.
+![image](https://user-images.githubusercontent.com/59475851/225666059-298e40a9-77be-4092-aeb6-f32847673d9f.png)
 
+![image](https://user-images.githubusercontent.com/59475851/225666243-1c0d2064-8966-4368-a6a9-83b405432daa.png)
+
+위의 사진과 같이 주석 처리하게 되면 migrate로 mysql과 연동 가능하게 되었다. (MYSQL WORKbench)
 
 
 ### 4. 배포 이후 HTTPS을 위한 nginx 설정 이슈
@@ -146,7 +152,7 @@
 
 1. HTTPS 을 설정 하기 위해선 기본적으로 Nginx 컨테이너가 무조건 실행 되어야 했다.
 2. ssl 설정 부분을 주석 처리하고,  nginx을 실행 시켰다.
-3. 이후 Docker hub에는 certbot 공식 image가 존재했고 이를 이용하여 인증성을 발급
+3. 이후 Docker hub에는 certbot 공식 image가 존재했고 이를 이용하여 인증서을 발급
 4. 발급 받은 인증서를 nginx 컨테이너가 불러오는 디렉터리에 인증서를 복사
 5. 하지만 인증서 심볼릭 링크가 존재 하므로 원본 복사는 불가했고, 복사본을 컨테이너에 복사
 6. 주석 했던 nginx 설정 부분을 풀고 프록시 서버 부분을 http://example.com 으로 수정
@@ -188,10 +194,3 @@ django settings.py 아래 사진과 같이 코드 추가
 새로운 기술, 프레임워크 등을 학습하는 부분에 대해 자신감을 얻을수 있었고 백엔드 개발자를 지망하는
 
 지망생으로서 백엔드에서 필수적으로 배워야 할 부분을 배운것 같아 적은 기간이였지만 뿌듯한 프로젝트 였다.
-
-
-
-
-
-
-
