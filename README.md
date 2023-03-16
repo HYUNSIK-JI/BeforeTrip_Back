@@ -77,13 +77,25 @@
 
 ### ⁉️ 에러 메세지
 
-쿠키 설정 중 SAME_SITE 라는 속성이 존재 한다. 예전에는 기본 값이 None 이였다고 한다. 하지만 쿠키 설정이 보안 적인 이유 로 기본 값이 LAX으로 변경 되어 프론트엔드에서 쿠키를 받아 들이지 못하는 이슈가 존재 했다.
+쿠키 설정 중 SAME_SITE 라는 속성이 존재 한다.
+
+예전에는 기본 값이 None 이였다고 한다. 
+
+하지만 쿠키 설정이 보안 적인 이유 로 기본 값이 LAX으로 변경 되어 프론트엔드에서 쿠키를 받아 들이지 못하는 이슈가 존재 했다.
+![image](https://user-images.githubusercontent.com/59475851/225653671-47619d65-7c45-4dae-9d0b-495493b904a9.png)
+![image](https://user-images.githubusercontent.com/59475851/225655594-da2cbf90-6c6c-4083-8f14-baf2de025752.png)
+![image](https://user-images.githubusercontent.com/59475851/225653743-0e6ba570-7ae7-4534-b064-b570851ff875.png)
 
 
 ### ⭕️ 해결 방법
 
-1. 쿠키 설정을 Settings.py 에서 커스텀 하였고 이를 set_cookie시 커스텀 설정으로 오류를 해결 하였다.
+1. 쿠키 설정을 커스텀 진행
 
+![image](https://user-images.githubusercontent.com/59475851/225657429-f095e07d-a798-4189-90f5-766a750e8c4b.png)
+
+2. HTTPS 설정
+
+![image](https://user-images.githubusercontent.com/59475851/225658181-42d362c2-aab7-4b4a-aab5-ad93daea58f3.png)
 
 
 ### 2. CORS
