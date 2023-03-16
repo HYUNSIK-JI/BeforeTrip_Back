@@ -80,7 +80,6 @@
 쿠키 설정 중 SAME_SITE 라는 속성이 존재 한다. 예전에는 기본 값이 None 이였다고 한다. 하지만 쿠키 설정이 보안 적인 이유 로 기본 값이 LAX으로 변경 되어 프론트엔드에서 쿠키를 받아 들이지 못하는 이슈가 존재 했다.
 
 
-
 ### ⭕️ 해결 방법
 
 1. 쿠키 설정을 Settings.py 에서 커스텀 하였고 이를 set_cookie시 커스텀 설정으로 오류를 해결 하였다.
@@ -150,21 +149,21 @@
 
 1. Static 파일을 읽어 오지 못해 css, js 등 홈페이지 가 깨지는 현상 발생
 
+![static4](https://user-images.githubusercontent.com/59475851/225648023-02112e8b-60cb-474e-aa39-68fa79b2006c.PNG)
 
 
 ### ⭕️ 해결 방법
-
-1. nginx 컨테이너 와 Django 컨테이너을 volum을 통해 동기화
-2. nginx 설정 파일에 static를 요구하게 되면 설정 해놓은 해당 디렉터리를 참조 하게 설정
-3. 그럼에도 읽어 오지 못하는 현상 발생
-4. 파이썬 라이브러리 중 whitenoise 설치
-5. settings.py 설정파일 STATIC_HOST = 'https://www.example.com 추가
-6. 자동적으로 python manage.py collectstatic 명령어 수행
-7. nginx 컨테이너 참조된 디렉터리 를 통해 파일 읽어오기 성공
+nginx 설정 파일 코드 추가
+![static1](https://user-images.githubusercontent.com/59475851/225648076-a5cdfdbf-6400-49ee-adfc-b452680ba779.PNG)
 
 
+django settings.py 아래 사진과 같이 코드 추가
+![static2](https://user-images.githubusercontent.com/59475851/225648123-678530e4-5214-4580-90ec-1bfa8f5e979a.PNG)
+![static3](https://user-images.githubusercontent.com/59475851/225648136-3cbbf8c1-965b-4bf1-81b8-bb701608e6e4.PNG)
 
+도커 컨테이너 설정 추가
 
+![static5](https://user-images.githubusercontent.com/59475851/225649170-35ac4bfe-566b-42c5-9b85-71900d525055.PNG)
 
 ## 프로젝트 후기
 
