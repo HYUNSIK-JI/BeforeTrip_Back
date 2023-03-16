@@ -62,7 +62,6 @@
 
 > **💻 메인 Role - BackEnd: BackEnd 전체 코드 작성**
 
-- 코드 저장소: https://github.com/hjkim1350/semi_project/tree/master/articles
 - 구현 주요 기능
   - CRUD: 여행지 글 후기 / 댓글 / 좋아요
   - 기존 Django sqlite3 데이터 베이스를 MYSQL로 전환
