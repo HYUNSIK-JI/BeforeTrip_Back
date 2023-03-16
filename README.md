@@ -91,15 +91,16 @@
 
 ### ⁉️ 에러 메세지
 
-쿠키 설정 중 SAME_SITE 라는 속성이 존재 한다. 예전에는 기본 값이 None 이였다고 한다. 하지만 쿠키 설정이 보안 적인 이유 로 기본 값이 LAX으로 변경 되어 프론트엔드에서 쿠키를 받아 들이지 못하는 이슈가 존재 했다.
-
+![CORS](https://user-images.githubusercontent.com/59475851/225637095-3f46d089-5af7-4223-82eb-499a3f286b2d.PNG)
 
 
 ### ⭕️ 해결 방법
 
-1. CORS는 서버 단에서 CORS_WHITE리스트를 만들었고 서버의 허용으로 해결 하였다.
+1. Nginx 설정 파일에서 
 
+![CORS3](https://user-images.githubusercontent.com/59475851/225641504-f3d7f164-c910-4d76-8f58-59f4fef0a8ef.PNG)
 
+아래와 같이 헤더에 값을 추가  하면 해결 되었다.
 
 
 
