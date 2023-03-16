@@ -154,6 +154,7 @@
 
 ### ⭕️ 해결 방법
 nginx 설정 파일 코드 추가
+
 ![static1](https://user-images.githubusercontent.com/59475851/225648076-a5cdfdbf-6400-49ee-adfc-b452680ba779.PNG)
 
 
