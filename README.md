@@ -59,8 +59,66 @@
   - 좋아요 많은 순으로 꿀팁 정보 조회
 
 ### API 문서
-| 앱 | 이름 | 클래스 이름 | 메소드 | 요청 URL | 상세 내용 | 참고사항 | API 요청 | API 값 |
+<details>
 
+ [로그인](https://www.notion.so/827f0fe12b774ebc917e939e96afd7a8)
+
+ [로그아웃](https://www.notion.so/65b5aff0ccbf4962a7b01d12c40fdb68)
+
+ [유저 정보 확인](https://www.notion.so/e5734addc89043309b462af441ba7706)
+
+ [로그인 유지](https://www.notion.so/bfc1e058234045829c9436a2ed5f9e68)
+
+ [커뮤니티 후기 조회](https://www.notion.so/5431227819f846d29073fc7d243a7c42)
+
+ [커뮤니티 후기 생성](https://www.notion.so/105e3f73e3974cb38f586bf8899ab02d)
+
+ [커뮤니티 게시글 상세보기](https://www.notion.so/7a18d3b7ebe24cc08112ed759d6b38be)
+
+ [커뮤니티 게시글 수정](https://www.notion.so/b55875316e7245e4b925a8966fa20612)
+
+ [커뮤니티 게시글 삭제](https://www.notion.so/1aa55b689eb94e149d0b5c12fb87a14c)
+
+ [커뮤니티 게시글 댓글 조회](https://www.notion.so/543e01589e5946d7b42e52e4e53bf34f)
+
+ [커뮤니티 게시글 댓글 작성](https://www.notion.so/c231f8ab64384e91b4f4481ffb98bcb1)
+
+ [커뮤니티 게시글 댓글 상세 보기](https://www.notion.so/57f73ed8edca4b70a02de32e7033900c)
+
+ [커뮤니티 게시글 댓글 수정](https://www.notion.so/ef6af54bfcd7417dbab7e1fd9613cc61)
+
+ [커뮤니티 게시글 댓글 삭제](https://www.notion.so/c7d793a4e3bb460996eb3849801b482e)
+
+ [커뮤니티 게시글 좋아요 순 조회](https://www.notion.so/bd4911ea09734c108f8ce5bd92abeef5)
+
+ [커뮤니티 게시글 좋아요](https://www.notion.so/f7282e29d3b647f5a4bbc908836b4113)
+
+
+ [국가별 커뮤니티 후기 조회](https://www.notion.so/31bafe8f61b04a16a6eb7f73cf7dca47)
+
+ [국가별  커뮤니티 후기 생성](https://www.notion.so/b086e97873b2444397b8f0ab497397b5)
+
+ [국가별  커뮤니티 게시글 상세보기](https://www.notion.so/fa554d46affb41d6837665022a116d38)
+
+ [국가별  커뮤니티 게시글 수정](https://www.notion.so/a509e046d495415aaa8f86abefc596b5)
+
+ [국가별  커뮤니티 게시글 삭제](https://www.notion.so/72603a1706c84b2284f2f92b81fc620f)
+
+ [국가별  커뮤니티 게시글 댓글 조회](https://www.notion.so/3977ace887c64b19acb6f453cabd5854)
+
+ [국가별  커뮤니티 게시글 댓글 작성](https://www.notion.so/e5e6fa082c0047c081fb8ba61c4cc8e8)
+
+ [국가별  커뮤니티 게시글 댓글 상세 보기](https://www.notion.so/7ceece1b38c6464b8799d8f943d011f5)
+
+ [국가별  커뮤니티 게시글 댓글 수정](https://www.notion.so/7374546c01ff443193e67ec6574d1747)
+
+ [국가별  커뮤니티 게시글 댓글 삭제](https://www.notion.so/c3f686f8da8c4a52bca62bbbad4ae0e5)
+
+ [국가별  커뮤니티 게시글 좋아요 순 조회](https://www.notion.so/005d7f3a3d694524bd89d9d3e4793680)
+
+ [국가별  커뮤니티 게시글 좋아요](https://www.notion.so/b2d039e6b8c64e0b88aae5987852fadb)
+ 
+ </details>
 
 ### ✅ 내가 담당한 기능
 
