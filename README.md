@@ -58,7 +58,8 @@
   - 꿀팁 정보 댓글 작성/ 삭제 / 수정
   - 좋아요 많은 순으로 꿀팁 정보 조회
 
-### API 문서
+
+### 👻 API 문서
 <details>
 
  [로그인](https://www.notion.so/827f0fe12b774ebc917e939e96afd7a8)
