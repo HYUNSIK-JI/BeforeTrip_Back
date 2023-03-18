@@ -49,12 +49,21 @@ class ReviewDetail(APIView):
         review = self.get_object(pk, country_code)
         serializer = ReviewSerializer(review, data=request.data)        
         if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
+            access = request.COOKIES.get('access', None)
+            payload = jwt.decode(access, SECRET_KEY, algorithms=['HS256'])
+            user_pk = payload.get('user_id')
+            if review.user_id == user_pk:
+                serializer.save()
+                return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     def delete(self, request, pk, country_code):
         review = self.get_object(pk, country_code)
-        review.delete()
+        access = request.COOKIES.get('access', None)
+        payload = jwt.decode(access, SECRET_KEY, algorithms=['HS256'])
+        user_pk = payload.get('user_id')
+
+        if review.user_id == user_pk:
+            review.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 class ReviewCommentList(APIView):
 
@@ -96,14 +105,30 @@ class ReviewComment(APIView):
         comment = self.get_object(pk)
         serializer = CommentSerializer(comment, data=request.data)        
         if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
+            access = request.COOKIES.get('access', None)
+            payload = jwt.decode(access, SECRET_KEY, algorithms=['HS256'])
+            user_pk = payload.get('user_id')
+
+            if comment.user_id == user_pk:
+                serializer.save()
+                return Response(serializer.data)
+            else:
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST) 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
     def delete(self, request, pk, comment_pk, country_code, format=None):
-        comment = self.get_object(pk, comment_pk)
-        comment.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        access = request.COOKIES.get('access', None)
+        payload = jwt.decode(access, SECRET_KEY, algorithms=['HS256'])
+        user_pk = payload.get('user_id')
+        if access:
+            comment = self.get_object(pk, comment_pk)
+            if comment.user_id == user_pk:
+                comment.delete()
+                return Response(status=status.HTTP_204_NO_CONTENT)
+            else:
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            return Response(status=status.HTTP_204_NO_CONTENT)
     
 class ReviewBest(APIView):
     def get(self, request, country_code):
@@ -112,15 +137,16 @@ class ReviewBest(APIView):
         return Response(serializer.data)
 
 class Reviewlike(APIView):
-
     def get(self, request, pk, country_code):
         review = Country.objects.get(pk=pk)
         access = request.COOKIES.get('access', None)
         payload = jwt.decode(access, SECRET_KEY, algorithms=['HS256'])
         user_pk = payload.get('user_id')
 
-        user = User.objects.get(pk=user_pk)
-
+        if access:
+            user = User.objects.get(pk=user_pk)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         if user in review.like_country.all():
             review.like_country.remove(user)
         else:
