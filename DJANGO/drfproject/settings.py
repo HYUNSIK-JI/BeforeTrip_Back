@@ -131,7 +131,7 @@ DATABASES = {
         'PORT': '3306'
     }
 }
-SECRET_KEY = 'django-insecure-7f+6&qk*&ndjb3#-v*un7s7v)lr#ih*czyj3#m9q8ltir9dnph'
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
