@@ -246,6 +246,10 @@ django settings.py 아래 사진과 같이 코드 추가
 
 ![static5](https://user-images.githubusercontent.com/59475851/225649170-35ac4bfe-566b-42c5-9b85-71900d525055.PNG)
 
+## 개선 사항(예정)
+1.API문서화
+
+
 ## 프로젝트 후기
 
 처음 백엔드 부분을 맡았을땐 막막 하였다. django rest framework 부분도 잘 모르고 
