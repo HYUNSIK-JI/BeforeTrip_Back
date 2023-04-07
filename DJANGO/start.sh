@@ -10,7 +10,7 @@ echo "==> collectstatic 실행"
 python manage.py collectstatic --settings=drfproject.deploy.settings --noinput -v 3
 
 echo "==> 패키지 다운로드"
-pip install -r /code/requirements.txt
+pip install -r srv/code/requirements.txt
 
 echo "==> 배포!"
 gunicorn -b 0.0.0.0:8000 --env DJANGO_SETTINGS_MODULE=drfproject.settings drfproject.wsgi:application
