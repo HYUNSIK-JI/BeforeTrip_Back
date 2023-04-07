@@ -221,6 +221,8 @@
 6. 주석 했던 nginx 설정 부분을 풀고 프록시 서버 부분을 http://example.com 으로 수정
 7. nginx 컨테이너 재 실행
 
+8. docker-compose 파일에 포트 번호 게시 ex) - "443:443"
+
 
 
 ### 5.배포 이후 Static 파일 찾아 오지 못하는 현상
