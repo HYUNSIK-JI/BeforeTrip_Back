@@ -92,8 +92,8 @@ class ReviewComment(APIView):
         serializer = CommentSerializer(comment)
         return Response(serializer.data)
 
-    def put(self, request, pk, comment_pk, format=None):
-        comment = self.get_object(pk)
+    def patch(self, request, pk, comment_pk, format=None):
+        comment = self.get_object(pk, comment_pk)
         serializer = CommentSerializer(comment, data=request.data)        
         if serializer.is_valid():
             serializer.save()
